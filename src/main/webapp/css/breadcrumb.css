@@ -1,0 +1,12 @@
+.breadcrumb {
+    background-color: #eeeeed;
+    position: absolute;
+    left: 190px;
+    top: 50px;
+    z-index: 999;
+    font-size: 17px;
+}
+
+.breadcrumb li a {
+    margin-left: 0;
+}

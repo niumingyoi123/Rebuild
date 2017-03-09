@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="water.dao.PoolevaluateMapper" >
+  <resultMap id="BaseResultMap" type="water.model.Poolevaluate" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="t" property="t" jdbcType="DATE" javaType="java.sql.Date"/>
+    <result column="PoolID" property="poolid" jdbcType="VARCHAR" />
+    <result column="PAC" property="pac" jdbcType="DECIMAL" />
+    <result column="FeCl3" property="fecl3" jdbcType="DECIMAL" />
+    <result column="OpenDegree" property="opendegree" jdbcType="DECIMAL" />
+    <result column="RotationSpeed" property="rotationspeed" jdbcType="DECIMAL" />
+    <result column="SV" property="sv" jdbcType="DECIMAL" />
+    <result column="SmallMudFre" property="smallmudfre" jdbcType="DECIMAL" />
+    <result column="BigMudFre" property="bigmudfre" jdbcType="DECIMAL" />
+    <result column="NTU" property="ntu" jdbcType="DECIMAL" />
+    <result column="AlgaeContent" property="algaecontent" jdbcType="DECIMAL" />
+    <result column="OutNTU" property="outntu" jdbcType="DECIMAL" />
+    <result column="CL" property="cl" jdbcType="DECIMAL" />
+    <result column="WaterTemp" property="watertemp" jdbcType="DECIMAL" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from poolevaluate
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="water.model.Poolevaluate" useGeneratedKeys="true" keyProperty="id">
+    insert into poolevaluate (ID, t, PoolID, PAC, 
+      FeCl3, OpenDegree, RotationSpeed, 
+      SV, SmallMudFre, BigMudFre, 
+      NTU, AlgaeContent, OutNTU, 
+      CL, WaterTemp)
+    values (#{id,jdbcType=INTEGER}, #{t,jdbcType=DATE,javaType=java.sql.Date}, #{poolid,jdbcType=VARCHAR}, #{pac,jdbcType=DECIMAL}, 
+      #{fecl3,jdbcType=DECIMAL}, #{opendegree,jdbcType=DECIMAL}, #{rotationspeed,jdbcType=DECIMAL}, 
+      #{sv,jdbcType=DECIMAL}, #{smallmudfre,jdbcType=DECIMAL}, #{bigmudfre,jdbcType=DECIMAL}, 
+      #{ntu,jdbcType=DECIMAL}, #{algaecontent,jdbcType=DECIMAL}, #{outntu,jdbcType=DECIMAL}, 
+      #{cl,jdbcType=DECIMAL}, #{watertemp,jdbcType=DECIMAL})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="water.model.Poolevaluate" >
+    update poolevaluate
+    set t = #{t,jdbcType=DATE,javaType=java.sql.Date},
+      PoolID = #{poolid,jdbcType=VARCHAR},
+      PAC = #{pac,jdbcType=DECIMAL},
+      FeCl3 = #{fecl3,jdbcType=DECIMAL},
+      OpenDegree = #{opendegree,jdbcType=DECIMAL},
+      RotationSpeed = #{rotationspeed,jdbcType=DECIMAL},
+      SV = #{sv,jdbcType=DECIMAL},
+      SmallMudFre = #{smallmudfre,jdbcType=DECIMAL},
+      BigMudFre = #{bigmudfre,jdbcType=DECIMAL},
+      NTU = #{ntu,jdbcType=DECIMAL},
+      AlgaeContent = #{algaecontent,jdbcType=DECIMAL},
+      OutNTU = #{outntu,jdbcType=DECIMAL},
+      CL = #{cl,jdbcType=DECIMAL},
+      WaterTemp = #{watertemp,jdbcType=DECIMAL}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select ID, t, PoolID, PAC, FeCl3, OpenDegree, RotationSpeed, SV, SmallMudFre, BigMudFre, 
+    NTU, AlgaeContent, OutNTU, CL, WaterTemp
+    from poolevaluate
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select ID, t, PoolID, PAC, FeCl3, OpenDegree, RotationSpeed, SV, SmallMudFre, BigMudFre, 
+    NTU, AlgaeContent, OutNTU, CL, WaterTemp
+    from poolevaluate
+  </select>
+  <select id="findTotal" resultType="java.lang.Integer" >
+    select count(ID)
+    from poolevaluate
+  </select>
+</mapper>

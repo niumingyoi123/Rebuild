@@ -1,0 +1,164 @@
+
+/*���ñ�ͷ�и�*/
+.datagrid-header-row {
+	height: 25px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #0E2D5F;
+}
+/*��ͷ�����С*/
+.datagrid-header .datagrid-cell span {
+	font-size: 16px;
+}
+/*���ñ���и�*/
+.datagrid-row {
+	height: 23px;
+}
+/*��Ԫ����ʾ����*/
+.datagrid-cell {
+	font-size: 12px;
+}
+
+/* �������*/
+.panel-title {
+	font-size: 20px;
+	font-weight: bold;
+	color: #0E2D5F;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+}
+
+.panel-body {
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 14px;
+	width: 600px;
+}
+
+.tree-title {
+	font-size: 18px;
+	display: inline-block;
+	text-decoration: none;
+	vertical-align: top;
+	white-space: nowrap;
+	padding: 0 2px;
+	height: 18px;
+	line-height: 18px;
+}
+
+/* 
+���ñ�ͷ�и�
+.datagrid-header-row {
+	height: 35px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #0E2D5F;
+}
+��ͷ�����С
+.datagrid-header .datagrid-cell span {
+  font-size: 14px;
+}
+���ñ���и�
+.datagrid-row {
+	height: 35px;
+}
+��Ԫ����ʾ����
+.datagrid-cell {
+	font-size: 14px;
+}
+
+�б��
+.datagrid-cell-rownumber {
+	font-size: 14px;
+	height: 20px;
+}
+
+�������
+.panel-title {
+	font-size: 20px;
+	font-weight: bold;
+	color: #0E2D5F;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.panel-body {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  width:600px;
+}
+ */
+/**��ҳ���*/
+.pagination-page-list{
+	font:14px;
+}
+
+.datagrid-pager {
+  background: #F4F4F4;
+  font: 14px;
+}
+
+
+.datagrid-toolbar {
+	font-size: 14px;
+}
+
+.textbox{
+			height:25px;
+			margin:0;
+			padding:0 2px;
+			box-sizing:content-box;
+		}
+		
+
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+/*��ǩҳ���������С  */
+.tabs-title {
+  font-size: 18px;
+}
+
+#chooseIndexButton2{
+	position: absolute;
+	left: 1229px;
+	top: 11px;
+	width:120px;
+	height:35px;
+	font-family: '微软雅黑','Source Sans Pro';
+	font-size: 16px;
+	font-weight: bold;
+	border: 1px solid #99D3F5;
+	border-radius:3px;
+	padding: 1px;
+    padding-right: 0px;
+    background-color: #E0ECFF;
+}
+
